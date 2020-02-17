@@ -27,6 +27,7 @@ function calc(){
     else{
     let calctip = rate.value*total.value/100.0;
     tip.textContent = 'Tip: $' + calctip;
-    calctotal = (rate.value*total.value/100.0)+Number(total.value)+5.50;
+    calctotal = (rate.value*total.value/100.0)+Number(total.value)+(0.05*total.value);
     grandtotal.textContent = 'Grand Total: $'+ calctotal;
+}
 }
