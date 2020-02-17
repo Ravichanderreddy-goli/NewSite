@@ -10,7 +10,21 @@ btn.addEventListener("click", calc);
 
 function calc(){
 
-    // e.preventDefault();
+    if (total.value=='' || rate.value==''||total.value<=0||rate.value<0){
+        if (total.value== ''){
+            alert('Please Enter Total Value');
+        }
+        else if(total.value<=0){
+            alert('Total value should be above zero');
+        }
+        if (rate.value== ''){
+            alert('Please Enter Rate Value');
+        }
+        else if (rate.value<0){
+            alert('Rate value shouldn\'t be negative value');
+        }
+    }
+    else{
     let calctip = rate.value*total.value/100.0;
     tip.textContent = 'Tip: $' + calctip;
     calctotal = (rate.value*total.value/100.0)+Number(total.value)+5.50;
