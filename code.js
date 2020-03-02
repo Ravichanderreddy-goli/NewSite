@@ -31,3 +31,12 @@ function calc(){
     grandtotal.textContent = 'Grand Total: $'+ calctotal;
 }
 }
+
+const radius = document.querySelector('#radius');
+const submit = document.querySelector('#submit');
+
+bt1.addEventListener("click",calculate);
+function calculate()
+{
+    submit.textContent='Area of circle is ' +Math.PI*radius.value*radius.value;
+}
